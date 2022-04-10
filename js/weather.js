@@ -3,7 +3,6 @@ const loadData = async(value) => {
     const apiKey = "c277f146d751b90021a8b9e842027aef";
     const unit = "metric";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${apiKey}&units=${unit}`;
-    // console.log(url);
     const res = await fetch(url);
     const data = await res.json();
     displayData(data);
@@ -17,7 +16,6 @@ document.getElementById('search-button').addEventListener('click', () => {
 });
 
 const displayData = (data) => {
-    // console.log(data);
     console.log(data.name);
     const showError = document.getElementById('show-error');
     showError.textContent = '';
